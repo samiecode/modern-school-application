@@ -6,7 +6,7 @@ public class DBConnector {
 
     String url = "jdbc:mysql://localhost:3300/bobfi";
     String username = "root";
-    String password = "Magni064fg$";
+    String password = ""; //Magni064fg$
     Connection con;
     Statement statement;
     ResultSet result;
@@ -14,7 +14,6 @@ public class DBConnector {
     public DBConnector() {
         try{
             con = DriverManager.getConnection(url, username, password);
-            statement = con.createStatement();
         }
         catch (SQLException e){
             e.printStackTrace();
